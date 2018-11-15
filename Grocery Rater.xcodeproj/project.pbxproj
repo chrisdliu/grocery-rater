@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A4E8D6219CF7D400928718 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37A4E8D5219CF7D400928718 /* GoogleService-Info.plist */; };
 		37D43C612193DD3E0025E96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C602193DD3E0025E96A /* AppDelegate.swift */; };
 		37D43C632193DD3E0025E96A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C622193DD3E0025E96A /* ViewController.swift */; };
 		37D43C662193DD3E0025E96A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D43C642193DD3E0025E96A /* Main.storyboard */; };
 		37D43C682193DD3E0025E96A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D43C672193DD3E0025E96A /* Assets.xcassets */; };
 		37D43C6B2193DD3E0025E96A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D43C692193DD3E0025E96A /* LaunchScreen.storyboard */; };
-		37D43C742193E1B30025E96A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C732193E1B30025E96A /* LoginViewController.swift */; };
-		37D43C762193E1BC0025E96A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C752193E1BC0025E96A /* SignupViewController.swift */; };
+		37D43C742193E1B30025E96A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C732193E1B30025E96A /* LogInViewController.swift */; };
+		37D43C762193E1BC0025E96A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C752193E1BC0025E96A /* SignUpViewController.swift */; };
 		37D43C782193E1C50025E96A /* MainpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C772193E1C50025E96A /* MainpageViewController.swift */; };
+		52A756F45FAF9E2AE26BD88E /* Pods_Grocery_Rater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37A4E8D5219CF7D400928718 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37D43C5D2193DD3E0025E96A /* Grocery Rater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Rater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D43C602193DD3E0025E96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37D43C622193DD3E0025E96A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,9 +28,12 @@
 		37D43C672193DD3E0025E96A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37D43C6A2193DD3E0025E96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37D43C6C2193DD3E0025E96A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37D43C732193E1B30025E96A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		37D43C752193E1BC0025E96A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		37D43C732193E1B30025E96A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		37D43C752193E1BC0025E96A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		37D43C772193E1C50025E96A /* MainpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainpageViewController.swift; sourceTree = "<group>"; };
+		C83E175E925DF086BF9BC861 /* Pods-Grocery Rater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Rater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C7EFF377BFFBD168E19950 /* Pods-Grocery Rater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Rater.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater.release.xcconfig"; sourceTree = "<group>"; };
+		DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grocery_Rater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A756F45FAF9E2AE26BD88E /* Pods_Grocery_Rater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BCDFCB3A5D4542F2FBBA71C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C83E175E925DF086BF9BC861 /* Pods-Grocery Rater.debug.xcconfig */,
+				C8C7EFF377BFFBD168E19950 /* Pods-Grocery Rater.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		37D43C542193DD3E0025E96A = {
 			isa = PBXGroup;
 			children = (
 				37D43C5F2193DD3E0025E96A /* Grocery Rater */,
 				37D43C5E2193DD3E0025E96A /* Products */,
+				0BCDFCB3A5D4542F2FBBA71C /* Pods */,
+				92EED8B91C147868852EB3EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +85,7 @@
 				37D43C672193DD3E0025E96A /* Assets.xcassets */,
 				37D43C692193DD3E0025E96A /* LaunchScreen.storyboard */,
 				37D43C6C2193DD3E0025E96A /* Info.plist */,
+				37A4E8D5219CF7D400928718 /* GoogleService-Info.plist */,
 			);
 			path = "Grocery Rater";
 			sourceTree = "<group>";
@@ -74,11 +93,19 @@
 		37D43C722193E19C0025E96A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				37D43C732193E1B30025E96A /* LoginViewController.swift */,
-				37D43C752193E1BC0025E96A /* SignupViewController.swift */,
+				37D43C732193E1B30025E96A /* LogInViewController.swift */,
+				37D43C752193E1BC0025E96A /* SignUpViewController.swift */,
 				37D43C772193E1C50025E96A /* MainpageViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		92EED8B91C147868852EB3EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37D43C6F2193DD3E0025E96A /* Build configuration list for PBXNativeTarget "Grocery Rater" */;
 			buildPhases = (
+				4DE53585017D6D9490AEDC80 /* [CP] Check Pods Manifest.lock */,
 				37D43C592193DD3E0025E96A /* Sources */,
 				37D43C5A2193DD3E0025E96A /* Frameworks */,
 				37D43C5B2193DD3E0025E96A /* Resources */,
+				2B49A744757A3D0E6B413E8C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D43C6B2193DD3E0025E96A /* LaunchScreen.storyboard in Resources */,
+				37A4E8D6219CF7D400928718 /* GoogleService-Info.plist in Resources */,
 				37D43C682193DD3E0025E96A /* Assets.xcassets in Resources */,
 				37D43C662193DD3E0025E96A /* Main.storyboard in Resources */,
 			);
@@ -148,15 +178,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B49A744757A3D0E6B413E8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DE53585017D6D9490AEDC80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Grocery Rater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		37D43C592193DD3E0025E96A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D43C742193E1B30025E96A /* LoginViewController.swift in Sources */,
+				37D43C742193E1B30025E96A /* LogInViewController.swift in Sources */,
 				37D43C782193E1C50025E96A /* MainpageViewController.swift in Sources */,
 				37D43C632193DD3E0025E96A /* ViewController.swift in Sources */,
-				37D43C762193E1BC0025E96A /* SignupViewController.swift in Sources */,
+				37D43C762193E1BC0025E96A /* SignUpViewController.swift in Sources */,
 				37D43C612193DD3E0025E96A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +367,7 @@
 		};
 		37D43C702193DD3E0025E96A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C83E175E925DF086BF9BC861 /* Pods-Grocery Rater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +382,7 @@
 		};
 		37D43C712193DD3E0025E96A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C7EFF377BFFBD168E19950 /* Pods-Grocery Rater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

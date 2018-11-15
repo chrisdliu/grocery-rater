@@ -9,10 +9,14 @@
 import UIKit
 
 class MainpageViewController: UIViewController {
-
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var rateButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchButton.layer.cornerRadius = 5
+        rateButton.layer.cornerRadius = 5
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +35,12 @@ class MainpageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func search(_ sender: Any) {
+        performSegue(withIdentifier: "mainToFind", sender: nil)
+    }
 
+    @IBAction func rate(_ sender: Any) {
+        performSegue(withIdentifier: "mainToRate", sender: nil)
+    }
 }
