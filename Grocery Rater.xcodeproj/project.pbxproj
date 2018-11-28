@@ -16,6 +16,7 @@
 		37D43C742193E1B30025E96A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C732193E1B30025E96A /* LogInViewController.swift */; };
 		37D43C762193E1BC0025E96A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C752193E1BC0025E96A /* SignUpViewController.swift */; };
 		37D43C782193E1C50025E96A /* MainpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C772193E1C50025E96A /* MainpageViewController.swift */; };
+		37EC5CE2219D138B0052972A /* RateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EC5CE1219D138B0052972A /* RateController.swift */; };
 		52A756F45FAF9E2AE26BD88E /* Pods_Grocery_Rater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		37D43C732193E1B30025E96A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		37D43C752193E1BC0025E96A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		37D43C772193E1C50025E96A /* MainpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainpageViewController.swift; sourceTree = "<group>"; };
+		37EC5CE1219D138B0052972A /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
 		C83E175E925DF086BF9BC861 /* Pods-Grocery Rater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Rater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater.debug.xcconfig"; sourceTree = "<group>"; };
 		C8C7EFF377BFFBD168E19950 /* Pods-Grocery Rater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Rater.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater.release.xcconfig"; sourceTree = "<group>"; };
 		DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grocery_Rater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +98,7 @@
 				37D43C732193E1B30025E96A /* LogInViewController.swift */,
 				37D43C752193E1BC0025E96A /* SignUpViewController.swift */,
 				37D43C772193E1C50025E96A /* MainpageViewController.swift */,
+				37EC5CE1219D138B0052972A /* RateController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				37D43C632193DD3E0025E96A /* ViewController.swift in Sources */,
 				37D43C762193E1BC0025E96A /* SignUpViewController.swift in Sources */,
 				37D43C612193DD3E0025E96A /* AppDelegate.swift in Sources */,
+				37EC5CE2219D138B0052972A /* RateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
