@@ -43,4 +43,6 @@ class MainpageViewController: UIViewController {
     @IBAction func rate(_ sender: Any) {
         performSegue(withIdentifier: "mainToRate", sender: nil)
     }
+    
+    @IBAction func unwindToMain(segue: UIStoryboardSegue) { }
 }

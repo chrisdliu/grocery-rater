@@ -8,6 +8,8 @@
 
 import UIKit
 
+import FirebaseDatabase
+
 class RateController: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var producerField: UITextField!
@@ -24,16 +26,21 @@ class RateController: UIViewController {
     @IBOutlet weak var commentField: UITextView!
     
     var priceStars: [UIButton]?
+    var qualityStars: [UIButton]?
+    
+    var price = 0
+    var quality = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         priceStars = [price1, price2, price3, price4, price5]
+        qualityStars = [quality1, quality2, quality3, quality4, quality5]
+        
         let color = CGFloat(225.0 / 255.0)
         commentField.layer.borderColor = UIColor(red: color, green: color, blue: color, alpha: 1.0).cgColor
         commentField.layer.borderWidth = 1.0
         commentField.layer.cornerRadius = 5.0
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,12 +65,113 @@ class RateController: UIViewController {
     }
     
     func setPrice(stars: Int) {
-        print(stars)
+        price = stars
         for i in 0..<stars {
             priceStars![i].setImage(#imageLiteral(resourceName: "gold_star"), for: .normal)
         }
         for i in stars..<5 {
             priceStars![i].setImage(#imageLiteral(resourceName: "gray_star"), for: .normal)
         }
+    }
+    
+    @IBAction func selectQuality(_ sender: Any) {
+        guard let _ = qualityStars else { return }
+        guard let button = sender as? UIButton else { return }
+        if button == quality1 {
+            setQuality(stars: 1)
+        } else if button == quality2 {
+            setQuality(stars: 2)
+        } else if button == quality3 {
+            setQuality(stars: 3)
+        } else if button == quality4 {
+            setQuality(stars: 4)
+        } else if button == quality5 {
+            setQuality(stars: 5)
+        }
+    }
+    
+    func setQuality(stars: Int) {
+        quality = stars
+        for i in 0..<stars {
+            qualityStars![i].setImage(#imageLiteral(resourceName: "gold_star"), for: .normal)
+        }
+        for i in stars..<5 {
+            qualityStars![i].setImage(#imageLiteral(resourceName: "gray_star"), for: .normal)
+        }
+    }
+    
+    @IBAction func post(_ sender: Any) {
+        guard let name = nameField.text else { return }
+        guard let producer = producerField.text else { return }
+        if price == 0 || quality == 0 { return }
+        let comment = commentField.text ?? ""
+        
+        let ref = Database.database().reference()
+
+        var failed = false
+        ref.child("producers/\(producer)/\(name)/reviews").observeSingleEvent(of: .value, with: { snapshot in
+            if !snapshot.exists() {
+                let item: [String:Any] = [
+                    "price": 0,
+                    "quality": 0,
+                    "reviews": [],
+                ]
+                ref.child("producers/\(producer)/\(name)").updateChildValues(item) { error, ref in
+                    if error != nil {
+                        self.alertFail()
+                        failed = true
+                    }
+                }
+            }
+        }) { error in
+            self.alertFail()
+            failed = true
+        }
+        if failed { return }
+        
+        let key = ref.child("posts").childByAutoId().key!
+        let postData: [String:Any] = [
+            "name": name,
+            "producer": producer,
+            "price": price,
+            "quality": quality,
+            "comment": comment]
+        let data: [String:Any] = [
+            :
+        ]
+        ref.child("producers").child(producer).observeSingleEvent(of: .value, with: { snapshot in
+            if snapshot.exists() {
+                if let value = snapshot.value as? [NSDictionary] {
+                    
+                }
+            }
+        })
+        
+        
+        ref.child("posts/\(key)/").updateChildValues(data) { error, ref in
+            if error != nil {
+                self.alertFail()
+            } else {
+                self.alertSuccess()
+            }
+        }
+    }
+    
+    func getData(producer: String, name: String) -> [String:Any] {
+        
+    }
+    
+    func alertFail() {
+        let alert = UIAlertController(title: "Failure", message: "Failed to post rating!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+    
+    func alertSuccess() {
+        let alert = UIAlertController(title: "Success", message: "Posted rating!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+            self.performSegue(withIdentifier: "exitRate", sender: nil)
+        }))
+        present(alert, animated: true)
     }
 }
