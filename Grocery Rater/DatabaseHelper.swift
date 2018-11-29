@@ -48,12 +48,12 @@ func query(queryProducer: String, queryName: String, callback: @escaping (_ data
         var data: [[String:Any]] = []
         if snapshot.exists() {
             if let value = snapshot.value as? [String:Any] {
-                
                 //filtering
                 for (producer, products) in value {
-                    if (producer.range(of: queryProducer) != nil) {
+                    if (queryProducer == "" || producer.range(of: queryProducer) != nil) {
                         for (product, productInfo) in products as! [String:Any] {
-                            if (product.range(of: queryName) != nil) {
+                            if (queryName == "" || product.range(of: queryName) != nil) {
+                                print(product)
                                 data.append(productInfo as! [String:Any])
                             }
                         }
