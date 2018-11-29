@@ -9,6 +9,7 @@
 import UIKit
 
 class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var table: UITableView!
     
     var results: [[String:Any]] = []
     var queryName = ""
@@ -21,25 +22,23 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        <#code#>
+        results = []
+        query(queryProducer: queryProducer, queryName: queryName, callback: { data in
+            self.table.reloadData()
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return results.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = table.dequeueReusableCell(withIdentifier: "result") as! ResultCell
+        let result = results[indexPath.item]
+        cell.producerLabel.text = result["producer"] as? String
+        cell.nameLabel.text = result["name"] as? String
+        cell.setPrice(stars: Int(result["price"] as! Double + 0.5))
+        cell.setQuality(stars: Int(result["quality"] as! Double + 0.5))
+        return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

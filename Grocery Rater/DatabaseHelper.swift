@@ -21,6 +21,8 @@ func getItem(producer: String, name: String, callback: @escaping (_ data: [Strin
             }
         } else {
             let data: [String:Any] = [
+                "producer": producer,
+                "name": name,
                 "price": 0.0,
                 "quality": 0.0,
                 "reviews": [],
@@ -39,6 +41,15 @@ func setItem(producer: String, name: String, data: [String:Any], callback: @esca
     ref.child("producers/\(producer)/\(name)").updateChildValues(data, withCompletionBlock: callback)
 }
 
-func query(queryProducer: String, queryName: String, callback: () -> ()) {
-    
+func query(queryProducer: String, queryName: String, callback: (_ data: [[String:Any]]) -> ()) {
+    let ref = Database.database().reference()
+    ref.child("producers").observeSingleEvent(of: .value, with: { snapshot in
+        var data: [[String:Any]] = []
+        if snapshot.exists() {
+            if let value = snapshot.value as? [String:Any] {
+                for producer in value {
+                }
+            }
+        }
+    })
 }

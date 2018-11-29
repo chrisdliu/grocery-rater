@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3797EF9321AF772B006AE094 /* ResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797EF9221AF772B006AE094 /* ResultCell.swift */; };
 		37A4E8D6219CF7D400928718 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37A4E8D5219CF7D400928718 /* GoogleService-Info.plist */; };
 		37D43C612193DD3E0025E96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D43C602193DD3E0025E96A /* AppDelegate.swift */; };
 		37D43C662193DD3E0025E96A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D43C642193DD3E0025E96A /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3797EF9221AF772B006AE094 /* ResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCell.swift; sourceTree = "<group>"; };
 		37A4E8D5219CF7D400928718 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		37D43C5D2193DD3E0025E96A /* Grocery Rater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Grocery Rater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D43C602193DD3E0025E96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,10 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				37D43C732193E1B30025E96A /* LogInViewController.swift */,
-				6D71FAE5219D1C9B0018985A /* FindViewController.swift */,
 				37D43C752193E1BC0025E96A /* SignUpViewController.swift */,
 				37D43C772193E1C50025E96A /* MainpageViewController.swift */,
 				37EC5CE1219D138B0052972A /* RateController.swift */,
+				6D71FAE5219D1C9B0018985A /* FindViewController.swift */,
 				6D11CAB921AF6D3F00678F53 /* ResultViewController.swift */,
 			);
 			path = Controllers;
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				6D71FAE3219D11DA0018985A /* CategoryCell.swift */,
+				3797EF9221AF772B006AE094 /* ResultCell.swift */,
 			);
 			path = Prototypes;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				37D43C742193E1B30025E96A /* LogInViewController.swift in Sources */,
 				37FC62C421AF626C00D934F9 /* DatabaseHelper.swift in Sources */,
 				37D43C782193E1C50025E96A /* MainpageViewController.swift in Sources */,
+				3797EF9321AF772B006AE094 /* ResultCell.swift in Sources */,
 				37D43C762193E1BC0025E96A /* SignUpViewController.swift in Sources */,
 				37FC62C221AF489000D934F9 /* CategoryLayout.swift in Sources */,
 				37D43C612193DD3E0025E96A /* AppDelegate.swift in Sources */,
