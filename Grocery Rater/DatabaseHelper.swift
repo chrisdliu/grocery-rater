@@ -10,38 +10,31 @@ import UIKit
 
 import FirebaseDatabase
 
-func getItem(producer: String, name: String, callback) {
+func getItem(producer: String, name: String, callback: @escaping (_ data: [String:Any]) -> () ) {
     let ref = Database.database().reference()
     var data: [String:Any] = [:]
     ref.child("producers/\(producer)/\(name)").observeSingleEvent(of: .value, with: { snapshot in
         if snapshot.exists() {
             if let value = snapshot.value as? [String:Any] {
                 data = value
-                data["error"] = false
-                return
+                callback(data)
+            }
+        } else {
+            let data: [String:Any] = [
+                "price": 0.0,
+                "quality": 0.0,
+                "reviews": [],
+                ]
+            ref.child("producers/\(producer)/\(name)").updateChildValues(data) { error, ref in
+                if error == nil {
+                    callback(data)
+                }
             }
         }
-        data["error"] = true
     })
 }
 
-func createItem(producer: String, name: String) -> Bool {
+func setItem(producer: String, name: String, data: [String:Any], callback: @escaping (_ error: Error?, _ ref: DatabaseReference) -> ()) {
     let ref = Database.database().reference()
-    let data: [String:Any] = [
-        "price": 0,
-        "quality": 0,
-        "reviews": [],
-    ]
-    var success = true
-    ref.child("producers/\(producer)/\(name)").updateChildValues(data) { error, ref in
-        if error != nil {
-            success = false
-        }
-    }
-    
-}
-
-func setItem(data: [String:Any]) {
-    let ref = Database.database().reference()
-    
+    ref.child("producers/\(producer)/\(name)").updateChildValues(data, withCompletionBlock: callback)
 }

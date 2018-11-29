@@ -106,59 +106,36 @@ class RateController: UIViewController {
         if price == 0 || quality == 0 { return }
         let comment = commentField.text ?? ""
         
-        let ref = Database.database().reference()
-
-        var failed = false
-        ref.child("producers/\(producer)/\(name)/reviews").observeSingleEvent(of: .value, with: { snapshot in
-            if !snapshot.exists() {
-                let item: [String:Any] = [
-                    "price": 0,
-                    "quality": 0,
-                    "reviews": [],
-                ]
-                ref.child("producers/\(producer)/\(name)").updateChildValues(item) { error, ref in
-                    if error != nil {
-                        self.alertFail()
-                        failed = true
-                    }
-                }
-            }
-        }) { error in
-            self.alertFail()
-            failed = true
-        }
-        if failed { return }
-        
-        let key = ref.child("posts").childByAutoId().key!
         let postData: [String:Any] = [
-            "name": name,
-            "producer": producer,
             "price": price,
             "quality": quality,
-            "comment": comment]
-        let data: [String:Any] = [
-            :
+            "comment": comment
         ]
-        ref.child("producers").child(producer).observeSingleEvent(of: .value, with: { snapshot in
-            if snapshot.exists() {
-                if let value = snapshot.value as? [NSDictionary] {
-                    
+        
+        getItem(producer: producer, name: name, callback: { data in
+            var updated: [String:Any] = [:]
+            var reviews = data["reviews"] as! [[String:Any]]
+            reviews.append(postData)
+            
+            var itemPrice = 0.0
+            var itemQuality = 0.0
+            for review in reviews {
+                itemPrice += Double(review["price"] as! Int)
+                itemQuality += Double(review["quality"] as! Int)
+            }
+            
+            updated["price"] = itemPrice / Double(reviews.count)
+            updated["quality"] = itemQuality / Double(reviews.count)
+            updated["reviews"] = reviews
+            
+            setItem(producer: producer, name: name, data: updated, callback: { error, ref in
+                if error != nil {
+                    self.alertFail()
+                } else {
+                    self.alertSuccess()
                 }
-            }
+            })
         })
-        
-        
-        ref.child("posts/\(key)/").updateChildValues(data) { error, ref in
-            if error != nil {
-                self.alertFail()
-            } else {
-                self.alertSuccess()
-            }
-        }
-    }
-    
-    func getData(producer: String, name: String) -> [String:Any] {
-        
     }
     
     func alertFail() {
