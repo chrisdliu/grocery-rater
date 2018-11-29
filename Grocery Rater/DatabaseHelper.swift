@@ -38,3 +38,7 @@ func setItem(producer: String, name: String, data: [String:Any], callback: @esca
     let ref = Database.database().reference()
     ref.child("producers/\(producer)/\(name)").updateChildValues(data, withCompletionBlock: callback)
 }
+
+func query(queryProducer: String, queryName: String, callback: () -> ()) {
+    
+}

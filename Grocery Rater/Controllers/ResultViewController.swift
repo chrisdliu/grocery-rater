@@ -8,10 +8,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
-    @IBAction func search(_ sender: Any) {
-    }
+class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var results: [[String:Any]] = []
+    var queryName = ""
+    var queryProducer = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,17 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 
     /*
     // MARK: - Navigation

@@ -531,7 +531,7 @@
         <!--Search Results-->
         <scene sceneID="DfJ-vz-IX9">
             <objects>
-                <viewController title="Search Results" id="b6x-eV-bya" customClass="SearchViewController" customModule="Grocery_Rater" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Search Results" id="b6x-eV-bya" customClass="ResultViewController" customModule="Grocery_Rater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9Z-8e-Qnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

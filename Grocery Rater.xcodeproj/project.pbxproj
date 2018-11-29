@@ -19,7 +19,7 @@
 		37FC62C221AF489000D934F9 /* CategoryLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC62C121AF489000D934F9 /* CategoryLayout.swift */; };
 		37FC62C421AF626C00D934F9 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC62C321AF626C00D934F9 /* DatabaseHelper.swift */; };
 		52A756F45FAF9E2AE26BD88E /* Pods_Grocery_Rater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA78FEF19296C5CCB9C29F7A /* Pods_Grocery_Rater.framework */; };
-		6D11CABA21AF6D3F00678F53 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11CAB921AF6D3F00678F53 /* SearchViewController.swift */; };
+		6D11CABA21AF6D3F00678F53 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D11CAB921AF6D3F00678F53 /* ResultViewController.swift */; };
 		6D71FAE4219D11DA0018985A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FAE3219D11DA0018985A /* CategoryCell.swift */; };
 		6D71FAE6219D1C9B0018985A /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D71FAE5219D1C9B0018985A /* FindViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +38,7 @@
 		37EC5CE1219D138B0052972A /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
 		37FC62C121AF489000D934F9 /* CategoryLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLayout.swift; sourceTree = "<group>"; };
 		37FC62C321AF626C00D934F9 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
-		6D11CAB921AF6D3F00678F53 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6D11CAB921AF6D3F00678F53 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		6D71FAE3219D11DA0018985A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		6D71FAE5219D1C9B0018985A /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		C83E175E925DF086BF9BC861 /* Pods-Grocery Rater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grocery Rater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grocery Rater/Pods-Grocery Rater.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				37D43C752193E1BC0025E96A /* SignUpViewController.swift */,
 				37D43C772193E1C50025E96A /* MainpageViewController.swift */,
 				37EC5CE1219D138B0052972A /* RateController.swift */,
-				6D11CAB921AF6D3F00678F53 /* SearchViewController.swift */,
+				6D11CAB921AF6D3F00678F53 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D11CABA21AF6D3F00678F53 /* SearchViewController.swift in Sources */,
+				6D11CABA21AF6D3F00678F53 /* ResultViewController.swift in Sources */,
 				37D43C742193E1B30025E96A /* LogInViewController.swift in Sources */,
 				37FC62C421AF626C00D934F9 /* DatabaseHelper.swift in Sources */,
 				37D43C782193E1C50025E96A /* MainpageViewController.swift in Sources */,
