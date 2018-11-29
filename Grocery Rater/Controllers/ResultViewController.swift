@@ -17,13 +17,18 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        table.delegate = self
+        table.dataSource = self
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("requerying")
         results = []
+        table.reloadData()
         query(queryProducer: queryProducer, queryName: queryName, callback: { data in
+            self.results = data
+            print(data)
             self.table.reloadData()
         })
     }
