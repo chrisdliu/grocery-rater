@@ -499,7 +499,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MOs-Je-w77">
-                                                    <rect key="frame" x="38" y="0.0" width="300" height="149.5"/>
+                                                    <rect key="frame" x="38" y="1" width="300" height="149.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpv-Y6-Njq">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>

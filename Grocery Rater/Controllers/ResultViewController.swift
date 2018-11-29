@@ -19,16 +19,15 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
+        table.tableFooterView = UIView()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("requerying")
         results = []
         table.reloadData()
         query(queryProducer: queryProducer, queryName: queryName, callback: { data in
             self.results = data
-            print(data)
             self.table.reloadData()
         })
     }
@@ -45,5 +44,13 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.setPrice(stars: Int(result["price"] as! Double + 0.5))
         cell.setQuality(stars: Int(result["quality"] as! Double + 0.5))
         return cell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }
