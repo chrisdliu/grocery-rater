@@ -14,6 +14,8 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var results: [[String:Any]] = []
     var queryName = ""
     var queryProducer = ""
+    var priceDescending = true
+    var qualityDescending = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,4 +55,17 @@ class ResultViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    @IBAction func sortPrice(_ sender: Any) {
+        results.sort(by: {x, y in (x["price"] as! Double > y["price"] as! Double) == priceDescending})
+        priceDescending = !priceDescending
+        table.reloadData()
+    }
+    
+    @IBAction func sortQuality(_ sender: Any) {
+        results.sort(by: {x, y in (x["quality"] as! Double > y["quality"] as! Double) == qualityDescending})
+        qualityDescending = !qualityDescending
+        table.reloadData()
+    }
+    
 }
